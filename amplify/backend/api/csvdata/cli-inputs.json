@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "csvdata",
+    "serviceName": "AppSync",
+    "defaultAuthType": {
+      "mode": "AWS_IAM"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AMAZON_COGNITO_USER_POOLS",
+        "cognitoUserPoolId": "authcsvdatae631890f"
+      },
+      {
+        "mode": "API_KEY",
+        "expirationTime": 50,
+        "apiKeyExpirationDate": "2026-01-26T03:10:16.406Z",
+        "keyDescription": "apikey"
+      }
+    ],
+    "conflictResolution": {}
+  }
+}

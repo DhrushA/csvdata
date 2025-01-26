@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "paths": {
+    "/generatepresignedurl": {
+      "name": "/generatepresignedurl",
+      "lambdaFunction": "preSignedUrl",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/fetchdata": {
+      "name": "/fetchdata",
+      "lambdaFunction": "fetchdata",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

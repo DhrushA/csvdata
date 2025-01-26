@@ -1,0 +1,6 @@
+{
+    "adminRoleNames": [
+        "arn:aws:iam::796973512580:user",
+        "arn:aws:sts::796973512580:assumed-role"
+    ]
+}

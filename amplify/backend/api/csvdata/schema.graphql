@@ -1,0 +1,20 @@
+type StudentData
+  @model
+  @auth(
+    rules: [
+      { allow: owner, ownerField: "id" }
+      {
+        allow: private
+        provider: iam
+        operations: [create, read, update, delete]
+      }
+    ]
+  ) {
+  id: ID!
+  first_name: String
+  last_name: String
+  gender: String
+  email: String
+  phone: String
+  date_of_birth: AWSDate
+}
