@@ -26,7 +26,7 @@
         },
         "fetchdata": {
           "deploymentBucketName": "amplify-csvdata-dev-16702-deployment",
-          "s3Key": "amplify-builds/fetchdata-67573654562b332f525a-build.zip"
+          "s3Key": "amplify-builds/fetchdata-6374556373614b426566-build.zip"
         },
         "sendEmail": {
           "deploymentBucketName": "amplify-csvdata-dev-16702-deployment",
