@@ -53,6 +53,14 @@
           ],
           "category": "function",
           "resourceName": "fetchdata"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "sendEmail"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -193,6 +201,22 @@
         {
           "category": "function",
           "resourceName": "preSignedUrl"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendEmail_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendEmail"
+        }
+      ]
+    },
+    "AMPLIFY_function_sendEmail_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sendEmail"
         }
       ]
     }

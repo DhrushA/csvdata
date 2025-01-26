@@ -60,17 +60,17 @@ const FileUploader = () => {
       });
 
       // Step 3: Save file info to the database (like file URL)
-      const saveFileResponse = await axios.post('https://your-api-endpoint.com/save-file', {
-        fileName: file.name,
-        fileUrl: uploadURL, // Or the final S3 URL after upload
-        fileType: file.type,
-      });
+      // const saveFileResponse = await axios.post('https://your-api-endpoint.com/save-file', {
+      //   fileName: file.name,
+      //   fileUrl: uploadURL, // Or the final S3 URL after upload
+      //   fileType: file.type,
+      // });
 
-      if (saveFileResponse.status === 200) {
-        setSuccessMessage('File uploaded and saved to the database successfully!');
-      } else {
-        setSuccessMessage('File uploaded successfully, but failed to save in the database.');
-      }
+      // if (saveFileResponse.status === 200) {
+      //   setSuccessMessage('File uploaded and saved to the database successfully!');
+      // } else {
+      //   setSuccessMessage('File uploaded successfully, but failed to save in the database.');
+      // }
     } catch (error) {
       console.error('Error uploading file:', error);
       setErrorMessage('File upload failed. Please try again later.');

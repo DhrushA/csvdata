@@ -22,13 +22,16 @@
         },
         "dataupload": {
           "deploymentBucketName": "amplify-csvdata-dev-16702-deployment",
-          "s3Key": "amplify-builds/dataupload-7738727a7a4734426752-build.zip"
+          "s3Key": "amplify-builds/dataupload-3538726f426337316344-build.zip"
         },
         "fetchdata": {
           "deploymentBucketName": "amplify-csvdata-dev-16702-deployment",
           "s3Key": "amplify-builds/fetchdata-67573654562b332f525a-build.zip"
         },
-        "sendEmail": {}
+        "sendEmail": {
+          "deploymentBucketName": "amplify-csvdata-dev-16702-deployment",
+          "s3Key": "amplify-builds/sendEmail-41616537725a5a686e5a-build.zip"
+        }
       },
       "storage": {
         "s3storage": {}
