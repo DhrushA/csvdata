@@ -45,8 +45,7 @@ def handler(event, context):
     gqlClient = create_graphql_client()
     # S3 client
     s3_client = boto3.client('s3')
-    print('API key = ', os.environ['API_CSVDATA_GRAPHQLAPIENDPOINTOUTPUT'])
-    print("gqlClient = ", gqlClient, "bucket_name = ", bucket_name, "object_key = ", object_key )
+    
     try:
         # Read CSV from S3
         csv_object = s3_client.get_object(Bucket=bucket_name, Key=object_key)
