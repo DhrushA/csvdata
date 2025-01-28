@@ -9,8 +9,6 @@ from gql.transport.requests import RequestsHTTPTransport
 from requests_aws4auth import AWS4Auth
 from gql import gql
 import traceback
-import csv
-import uuid
 
 app = Chalice(app_name="fetchData")
 sesClient = boto3.client('ses',region_name='us-east-2')
