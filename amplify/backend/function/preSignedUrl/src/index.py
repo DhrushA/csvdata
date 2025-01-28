@@ -32,7 +32,6 @@ def my_middleware(event, get_response):
     response = get_response(event)
     response.body = json.loads(json.dumps(response.body, default=default_serializer))
     print(f"Response.body:- {response.body}")
-    print("response-------: ", response)
     return response
 
 @app.route('/generatepresignedurl', methods=['POST'], cors=True, content_types=['application/json'])
@@ -47,7 +46,6 @@ def generate_presigned_url():
         return {'message': 'File name and file type are required'}, 400
 
     try:
-        # Generate a presigned URL to upload a file to S3
         presigned_url = generate_presigned_url_to_s3(file_name, file_type)
         return {'uploadURL': presigned_url}
     except ClientError as e:
@@ -55,8 +53,6 @@ def generate_presigned_url():
 
 
 def generate_presigned_url_to_s3(file_name, file_type):
-    """Generate a presigned URL to upload a file to S3"""
-    print('file_name :', file_name, 'file_type: ', file_type, 'Bucket name : ', BUCKET_NAME )
     try:
         # Generate the presigned URL
         presigned_url = s3.generate_presigned_url('put_object',

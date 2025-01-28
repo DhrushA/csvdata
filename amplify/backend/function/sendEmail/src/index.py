@@ -29,13 +29,12 @@ def my_middleware(event, get_response):
     response = get_response(event)
     response.body = json.loads(json.dumps(response.body, default=default_serializer))
     print(f"Response.body:- {response.body}")
-    print("response-------: ", response)
     return response
 
 @app.route('/sendemail', methods=['POST'], cors=True, content_types=['application/json'])
 def send_email():
     request = app.current_request
-    # Get the filename and filetype from the request body
+    # Get the recipient Email ID from the request body
     data = request.json_body
     recipient = data.get('recipient')
     

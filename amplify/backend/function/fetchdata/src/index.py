@@ -9,8 +9,6 @@ from gql.transport.requests import RequestsHTTPTransport
 from requests_aws4auth import AWS4Auth
 from gql import gql
 import traceback
-import csv
-import uuid
 
 app = Chalice(app_name="fetchData")
 
@@ -29,7 +27,6 @@ def my_middleware(event, get_response):
         event.path = event.path.replace('{proxy+}', event.uri_params['proxy'])
     response = get_response(event)
     response.body = json.loads(json.dumps(response.body, default=default_serializer))
-    print(f"Response.body:- {response.body}")
     print("response-------: ", response)
     return response
 
@@ -65,12 +62,10 @@ def create_graphql_client():
 
 @app.route('/fetchdata/studentdata', methods=['GET'], cors=True, content_types=['application/json'])
 def generate_presigned_url():
-    request = app.current_request
     gqlClient = create_graphql_client()
-    # Get the filename and filetype from the request body
     try:
 
-        # get group details from dynamoDB by passing userId 
+        # get list details from dynamoDB 
         query = gql(
         """
             query MyQuery {
